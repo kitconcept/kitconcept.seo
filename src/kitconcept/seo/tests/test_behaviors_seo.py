@@ -9,8 +9,6 @@ from plone.dexterity.fti import DexterityFTI
 from plone.testing.z2 import Browser
 from zope.interface import alsoProvides
 
-import io
-import os
 import unittest
 
 
@@ -53,9 +51,9 @@ class SeoBehaviorFunctionalTest(unittest.TestCase):
     def test_seo_fieldset_in_edit_form(self):
         self.browser.open(self.portal_url + '/seodocument/edit')
         self.assertTrue('Override the meta title.' in self.browser.contents)
-        self.assertTrue('Override the meta description' in self.browser.contents)
+        self.assertTrue('Override the meta description' in self.browser.contents)  # noqa
         self.assertTrue('SEO' in self.browser.contents)
-        self.assertTrue('<fieldset id="fieldset-seo"' in self.browser.contents)
+        self.assertTrue('<fieldset id="fieldset-seo"' in self.browser.contents)  # noqa
 
     def test_title_override_works(self):
         self.browser.open(self.portal_url + '/seodocument/edit')
