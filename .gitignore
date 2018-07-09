@@ -1,3 +1,5 @@
+.Python
+.vscode
 .coverage
 *.egg-info
 *.log
