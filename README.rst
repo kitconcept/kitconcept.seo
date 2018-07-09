@@ -27,19 +27,20 @@ kitconcept.seo
    :alt: kitconcept
    :target: https://kitconcept.com/
 
-Tell me what your product does
+SEO enhancements for the Plone Content Management System.
 
 Features
 --------
 
-- Can be bullet points
+- Adds SEO fieldset to Dexterity content types to override title and description for SEO
 
 
 Examples
 --------
 
 This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+
+- www.vhs-ehrenamtsportal.de
 
 
 Documentation
@@ -53,7 +54,7 @@ Translations
 
 This product has been translated into
 
-- Klingon (thanks, K'Plai)
+- German
 
 
 Installation
@@ -75,16 +76,14 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/kitconcept.seo/issues
-- Source Code: https://github.com/collective/kitconcept.seo
-- Documentation: https://docs.plone.org/foo/bar
+- Issue Tracker: https://github.com/kitconcept/kitconcept.seo/issues
+- Source Code: https://github.com/kitconcept/kitconcept.seo
 
 
 Support
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+If you are having issues, please let us know: info@kitconcept.com.
 
 
 License
