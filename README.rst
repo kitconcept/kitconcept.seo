@@ -27,7 +27,7 @@ kitconcept.seo
    :alt: kitconcept
    :target: https://kitconcept.com/
 
-SEO enhancements for the Plone Content Management System.
+SEO enhancements for the Plone Content Management System. Please note that kitconcept.seo is an add-on product for plone-react. If you are looking for a full featured SEO solution for Plone 4, we suggest looking into - `fourdigits.seo <https://pypi.org/project/fourdigits.seo/>`_.
 
 Features
 --------
@@ -40,13 +40,7 @@ Examples
 
 This add-on can be seen in action at the following sites:
 
-- www.vhs-ehrenamtsportal.de
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+- `VHS Ehrenamtsportal <www.vhs-ehrenamtsportal.de>`_
 
 
 Translations
