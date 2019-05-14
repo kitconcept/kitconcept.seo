@@ -74,7 +74,7 @@ bin/python bin/pip:
 
 .PHONY: Black
 black:  ## Run Black code formatter
-	test -f ${CURRENT_DIR}/bin/black && bin/black src/
+	test -f ${CURRENT_DIR}/bin/black && bin/black src/ || true
 
 .PHONY: Test
 test:  ## Test
