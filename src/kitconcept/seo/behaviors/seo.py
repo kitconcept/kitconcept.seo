@@ -62,7 +62,8 @@ class ISeo(model.Schema):
     # https://support.google.com/webmasters/answer/79812?hl=en
     seo_noarchive = schema.Bool(
         title=_(u"No Archive"),
-        description=_(u"Prevents search engines to store a cached copy of this page"),
+        description=_(
+            u"Prevents search engines to store a cached copy of this page"),
         required=False,
     )
 
