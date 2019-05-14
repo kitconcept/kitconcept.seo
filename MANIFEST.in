@@ -1,4 +1,7 @@
 graft src/kitconcept
 graft docs
 include *.rst
+exclude *.png
+exclude requirements.txt
+exclude Makefile
 global-exclude *.pyc
