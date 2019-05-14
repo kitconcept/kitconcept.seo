@@ -35,6 +35,8 @@ Features
 
 - Adds SEO fieldset to Dexterity content types to override title and description for SEO
 
+.. image:: https://raw.githubusercontent.com/kitconcept/kitconcept.seo/master/kitconcept-seo.png
+   :alt: kitconcept
 
 Examples
 --------
