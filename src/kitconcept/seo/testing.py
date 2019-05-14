@@ -21,29 +21,24 @@ class KitconceptSeoLayer(PloneSandboxLayer):
         self.loadZCML(package=kitconcept.seo)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'kitconcept.seo:default')
+        applyProfile(portal, "kitconcept.seo:default")
 
 
 KITCONCEPT_SEO_FIXTURE = KitconceptSeoLayer()
 
 
 KITCONCEPT_SEO_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(KITCONCEPT_SEO_FIXTURE,),
-    name='KitconceptSeoLayer:IntegrationTesting'
+    bases=(KITCONCEPT_SEO_FIXTURE,), name="KitconceptSeoLayer:IntegrationTesting"
 )
 
 
 KITCONCEPT_SEO_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(KITCONCEPT_SEO_FIXTURE, z2.ZSERVER_FIXTURE),
-    name='KitconceptSeoLayer:FunctionalTesting'
+    name="KitconceptSeoLayer:FunctionalTesting",
 )
 
 
 KITCONCEPT_SEO_ACCEPTANCE_TESTING = FunctionalTesting(
-    bases=(
-        KITCONCEPT_SEO_FIXTURE,
-        REMOTE_LIBRARY_BUNDLE_FIXTURE,
-        z2.ZSERVER_FIXTURE
-    ),
-    name='KitconceptSeoLayer:AcceptanceTesting'
+    bases=(KITCONCEPT_SEO_FIXTURE, REMOTE_LIBRARY_BUNDLE_FIXTURE, z2.ZSERVER_FIXTURE),
+    name="KitconceptSeoLayer:AcceptanceTesting",
 )

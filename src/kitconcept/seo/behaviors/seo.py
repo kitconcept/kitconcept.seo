@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 from kitconcept.seo import _
 from plone.autoform.interfaces import IFormFieldProvider
@@ -13,20 +12,13 @@ from zope.interface import provider
 @provider(IFormFieldProvider)
 class ISeo(model.Schema):
 
-    model.fieldset(
-        'seo',
-        label=_(u'SEO'),
-        fields=[
-            'seo_title',
-            'seo_description'
-        ]
-    )
+    model.fieldset("seo", label=_(u"SEO"), fields=["seo_title", "seo_description"])
 
     seo_title = schema.TextLine(
         title=_("Title"),
         description=_(
-            u"Override the meta title. When empty the default title will " +
-            u"be used. Use maximum 50 chararcters."
+            u"Override the meta title. When empty the default title will "
+            + u"be used. Use maximum 50 chararcters."
         ),
         required=False,
         max_length=70,
@@ -35,8 +27,9 @@ class ISeo(model.Schema):
     seo_description = schema.TextLine(
         title=_(u"Description"),
         description=_(
-            u"Override the meta description. When empty the default " +
-            u"description will be used. Use maximum 150 characters."),
+            u"Override the meta description. When empty the default "
+            + u"description will be used. Use maximum 150 characters."
+        ),
         required=False,
         max_length=155,
     )
@@ -45,6 +38,5 @@ class ISeo(model.Schema):
 @implementer(ISeo)
 @adapter(IDexterityContent)
 class Seo(object):
-
     def __init__(self, context):
         self.context = context
