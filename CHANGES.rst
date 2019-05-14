@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0.0a2 (unreleased)
---------------------
+1.0.0 (2019-05-14)
+------------------
 
 - Python 3 compatibility.
   [timo]
