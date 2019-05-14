@@ -71,7 +71,7 @@ class ISeo(model.Schema):
     seo_nosnippet = schema.Bool(
         title=_(u"No Snippet"),
         description=_(
-            u"Prevents search engines from displaying a snippet for your page in search results"
+            u"Prevents search engines from displaying a snippet for your page in search results"  # noqa
         ),
         required=False,
     )
