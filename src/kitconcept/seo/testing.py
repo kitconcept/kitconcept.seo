@@ -21,7 +21,7 @@ class KitconceptSeoLayer(PloneSandboxLayer):
         self.loadZCML(package=kitconcept.seo)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, "kitconcept.seo:default")
+        applyProfile(portal, 'kitconcept.seo:default')
 
 
 KITCONCEPT_SEO_FIXTURE = KitconceptSeoLayer()
