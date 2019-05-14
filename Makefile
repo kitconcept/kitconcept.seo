@@ -72,6 +72,10 @@ build-py3:  ## Build Plone 5.2 with Python 3
 bin/python bin/pip:
 	virtualenv --clear --python=python$(version) .
 
+.PHONY: Black
+black:  ## Run Black code formatter
+	test -f ${CURRENT_DIR}/bin/black && bin/black src/ --check || true
+
 .PHONY: Test
 test:  ## Test
 	bin/test

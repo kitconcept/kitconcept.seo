@@ -3,4 +3,4 @@
 
 from zope.i18nmessageid import MessageFactory
 
-_ = MessageFactory('kitconcept.seo')
+_ = MessageFactory("kitconcept.seo")
