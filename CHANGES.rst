@@ -5,6 +5,9 @@ Changelog
 1.0.0a2 (unreleased)
 --------------------
 
+- Python 3 compatibility.
+  [timo]
+
 - Plone 5.2 compatibility.
   [timo]
 
