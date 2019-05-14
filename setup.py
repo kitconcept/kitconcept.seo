@@ -43,7 +43,6 @@ setup(
         'setuptools',
         'z3c.jbot',
         'plone.behavior',
-        'plone.directives.form',
     ],
     extras_require={
         'test': [
