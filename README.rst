@@ -69,6 +69,64 @@ Install kitconcept.seo by adding it to your buildout::
 
 and then running ``bin/buildout``
 
+Than start up your Plone site and open it on ``localhost:8080`` in your browser. Log into your site and
+and click on the user symbol on the bottom left of the page. Choose Site Setup there.
+Now go to Add-ons and click Install at kitconcept.seo.
+
+Go back to the Page Setup and from there to Dexterity Content Types. There go to the content types
+you want to use kitcocncept.seo with and tick  SEO Behavior for each.
+
+Add to Volto site
+-----------------
+
+To add kitconcept.seo to your Volto page you need to edit the component you want to use it for.
+If you want use it for your whole page you can use it in the ``View.jsx`` (see `here <https://docs.voltocms.com/05-customizing/04-customizing-views/>`_ for further information on editing views in Volto).
+First you have to define the PropTypes for the seo elements by adding::
+
+   seo_title: PropTypes.string,
+   seo_description: PropTypes.string,
+
+... to the PropTypes of the component.
+
+Than you use React-Helmet to set the title and description of the component. So import React-Helmet
+with::
+
+   import Helmet from 'react-helmet';
+
+
+And finally add this to the jsx code of your component::
+
+   <Helmet
+          title={
+            this.props.content.seo_title
+              ? this.props.content.seo_title
+              : this.props.content.title
+          }
+          meta={
+            this.props.content.seo_description
+              ? [
+                  {
+                    name: 'description',
+                    content: this.props.content.seo_description,
+                  },
+                ]
+              : [
+                  {
+                    name: 'description',
+                    content: this.props.content.description,
+                  },
+                ]
+          }
+          bodyAttributes={{
+            class: `view-${viewName.toLowerCase()}`,
+          }}
+        />
+
+
+Usage in Volto
+--------------
+In your Volto page you need to go to the edit mode of the page you want to add a title and description for SEO and open the properties of the page by clicking the properties under the save button. Choose SEO there and add a title and description in the fields. When you are done hit the save button.
+
 
 Contribute
 ----------
