@@ -73,8 +73,26 @@ Than start up your Plone site and open it on ``localhost:8080`` in your browser.
 and click on the user symbol on the bottom left of the page. Choose Site Setup there.
 Now go to Add-ons and click Install at kitconcept.seo.
 
-Go back to the Page Setup and from there to Dexterity Content Types. There go to the content types
-you want to use kitcocncept.seo with and tick  SEO Behavior for each.
+Enable the SEO behavior
+^^^^^^^^^^^^^^^^^^^^^^^
+
+To enable the SEO tab for a specific content type you have to enable the kitconcept.seo behavior.
+Go to the page setup and then to the Dexterity Content Types control panel.
+Choose the content type you want to enable SEO for and enable the `kitconcept.seo` behavior.
+
+Enable the SEO behavior programmatically
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Enable the kitconcept.seo behavior by adding the behavior to the Factory Type Information (FTI) of your type in your generic setup profile. E.g. to enable SEO for the document type, drop a Document.xml file into the `profiles/default/types` folder of your add-on product with the following content::
+
+   <?xml version="1.0" encoding="utf-8"?>
+   <object name="Document" meta_type="Dexterity FTI" i18n:domain="plone" 
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+     <property name="behaviors" purge="False">
+       <element value="kitconcept.seo" />
+     </property>
+   </object>
+
 
 Add to Volto site
 -----------------
