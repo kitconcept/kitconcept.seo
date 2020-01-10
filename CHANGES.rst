@@ -5,7 +5,7 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
-- Add noindex, nofollow, noarchive, and nosnippet.
+- Add noindex option.
   [timo]
 
 

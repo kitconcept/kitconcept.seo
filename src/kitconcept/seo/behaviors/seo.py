@@ -19,9 +19,9 @@ class ISeo(model.Schema):
             "seo_title",
             "seo_description",
             "seo_noindex",
-            "seo_nofollow",
-            "seo_noarchive",
-            "seo_nosnippet",
+            #            "seo_nofollow",
+            #            "seo_noarchive",
+            #            "seo_nosnippet",
         ],
     )
 
@@ -52,29 +52,29 @@ class ISeo(model.Schema):
         required=False,
     )
 
-    # https://support.google.com/webmasters/answer/96569?hl=en
-    seo_nofollow = schema.Bool(
-        title=_(u"No Follow"),
-        description=_(u"Prevents search engines to follow links on this page"),
-        required=False,
-    )
+    # # https://support.google.com/webmasters/answer/96569?hl=en
+    # seo_nofollow = schema.Bool(
+    #     title=_(u"No Follow"),
+    #     description=_(u"Prevents search engines to follow links on this page"),
+    #     required=False,
+    # )
 
-    # https://support.google.com/webmasters/answer/79812?hl=en
-    seo_noarchive = schema.Bool(
-        title=_(u"No Archive"),
-        description=_(
-            u"Prevents search engines to store a cached copy of this page"),
-        required=False,
-    )
+    # # https://support.google.com/webmasters/answer/79812?hl=en
+    # seo_noarchive = schema.Bool(
+    #     title=_(u"No Archive"),
+    #     description=_(
+    #         u"Prevents search engines to store a cached copy of this page"),
+    #     required=False,
+    # )
 
-    # https://support.google.com/webmasters/answer/96569?hl=en
-    seo_nosnippet = schema.Bool(
-        title=_(u"No Snippet"),
-        description=_(
-            u"Prevents search engines from displaying a snippet for your page in search results"  # noqa
-        ),
-        required=False,
-    )
+    # # https://support.google.com/webmasters/answer/96569?hl=en
+    # seo_nosnippet = schema.Bool(
+    #     title=_(u"No Snippet"),
+    #     description=_(
+    #         u"Prevents search engines from displaying a snippet for your page in search results"  # noqa
+    #     ),
+    #     required=False,
+    # )
 
 
 @implementer(ISeo)
