@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.1 (unreleased)
+1.2.0 (2020-01-16)
 ------------------
 
 - Add canonical_url option.
