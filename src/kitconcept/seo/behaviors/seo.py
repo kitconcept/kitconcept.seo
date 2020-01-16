@@ -19,6 +19,7 @@ class ISeo(model.Schema):
             "seo_title",
             "seo_description",
             "seo_noindex",
+            "seo_canonical_url",
             #            "seo_nofollow",
             #            "seo_noarchive",
             #            "seo_nosnippet",
@@ -49,6 +50,15 @@ class ISeo(model.Schema):
     seo_noindex = schema.Bool(
         title=_(u"No Index"),
         description=_(u"Prevents a page from appearing in search engines"),
+        required=False,
+    )
+
+    # https://support.google.com/webmasters/answer/139066?hl=en
+    seo_canonical_url = schema.URI(
+        title=_(u"Canonical URL"),
+        description=_(
+            u"Tells the search engine to choose this URL as the canonical version and crawl that."
+        ),
         required=False,
     )
 

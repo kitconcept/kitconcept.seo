@@ -5,7 +5,8 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add canonical_url option.
+  [timo] 
 
 
 1.1.0 (2020-01-10)
