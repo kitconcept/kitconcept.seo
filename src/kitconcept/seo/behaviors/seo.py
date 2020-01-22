@@ -53,7 +53,7 @@ class ISeo(model.Schema):
         required=False,
     )
 
-    seo_canonical = schema.TextLine(
+    seo_canonical_url = schema.TextLine(
         title=_(u"Canonical Link"),
         description=_(
             u"Set the URL for the canonical page"
