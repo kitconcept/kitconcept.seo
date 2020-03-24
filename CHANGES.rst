@@ -5,7 +5,8 @@ Changelog
 1.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add Open Graph title, description and image.
+  [timo]
 
 
 1.2.1 (2020-01-16)
@@ -19,7 +20,7 @@ Changelog
 ------------------
 
 - Add canonical_url option.
-  [timo] 
+  [timo]
 
 
 1.1.0 (2020-01-10)
