@@ -32,7 +32,10 @@ If you are looking for a full featured SEO solution for Plone 4, we suggest look
 Features
 --------
 
-- Adds SEO fieldset to Dexterity content types to override title and description for SEO
+- Allows to override meta title and meta description per page
+- Allows to set the noindex header to exclude pages from being indexed
+- Allows to set a canonical URL
+- Allows to set Open Graph title, description and image
 
 .. image:: https://raw.githubusercontent.com/kitconcept/kitconcept.seo/master/kitconcept-seo.png
    :alt: kitconcept
@@ -85,7 +88,7 @@ Enable the SEO behavior programmatically
 Enable the kitconcept.seo behavior by adding the behavior to the Factory Type Information (FTI) of your type in your generic setup profile. E.g. to enable SEO for the document type, drop a Document.xml file into the `profiles/default/types` folder of your add-on product with the following content::
 
    <?xml version="1.0" encoding="utf-8"?>
-   <object name="Document" meta_type="Dexterity FTI" i18n:domain="plone" 
+   <object name="Document" meta_type="Dexterity FTI" i18n:domain="plone"
      xmlns:i18n="http://xml.zope.org/namespaces/i18n">
      <property name="behaviors" purge="False">
        <element value="kitconcept.seo" />
