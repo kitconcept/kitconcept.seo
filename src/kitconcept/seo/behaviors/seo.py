@@ -2,6 +2,7 @@
 from kitconcept.seo import _
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
+from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from zope import schema
 from zope.component import adapter
@@ -23,6 +24,9 @@ class ISeo(model.Schema):
             #            "seo_nofollow",
             #            "seo_noarchive",
             #            "seo_nosnippet",
+            "opengraph_title",
+            "opengraph_description",
+            "opengraph_image",
         ],
     )
 
@@ -30,7 +34,7 @@ class ISeo(model.Schema):
         title=_("Title"),
         description=_(
             u"Override the meta title. When empty the default title will "
-            + u"be used. Use maximum 50 chararcters."
+            + u"be used. Use maximum 50 characters."
         ),
         required=False,
         max_length=70,
@@ -85,6 +89,35 @@ class ISeo(model.Schema):
     #     ),
     #     required=False,
     # )
+
+    opengraph_title = schema.TextLine(
+        title=_("Open Graph Title"),
+        description=_(
+            u"Override the Open Graph title, that Facebook and Twitter use. When empty the default title will "
+            + u"be used. Use maximum 60 characters."
+        ),
+        required=False,
+        max_length=100,
+    )
+
+    opengraph_description = schema.TextLine(
+        title=_(u"Open Graph Description"),
+        description=_(
+            u"Override the Open Graph description, that Facebook and Twitter use. When empty the default "
+            + u"description will be used. Use maximum 155 characters."
+        ),
+        required=False,
+        max_length=155,
+    )
+
+    opengraph_image = NamedBlobImage(
+        title=_(u"Open Graph Image"),
+        description=_(
+            u"Override the Open Graph image, that Facebook and Twitter use. When empty the default "
+            + u"lead image will be used."
+        ),
+        required=False,
+    )
 
 
 @implementer(ISeo)
