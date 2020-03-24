@@ -9,7 +9,7 @@
   <plone:behavior
     name="kitconcept.seo"
     title="SEO Behavior"
-    description="Adds a SEO fieldset to override SEO settings"
+    description="Enhances a content type with fields for Search Engine Optimizations"
     provides=".seo.ISeo"
     factory=".seo.Seo"
     for="plone.dexterity.interfaces.IDexterityContent"

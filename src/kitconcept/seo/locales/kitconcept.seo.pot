@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-03-24 14:08+0000\n"
+"POT-Creation-Date: 2020-03-24 14:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: kitconcept.seo\n"
 
-#: kitconcept/seo/behaviors/configure.zcml:17
-msgid "Adds a SEO fieldset to override SEO settings"
-msgstr ""
-
 #: kitconcept/seo/behaviors/seo.py:62
 msgid "Canonical URL"
 msgstr ""
 
 #: kitconcept/seo/behaviors/seo.py:44
 msgid "Description"
+msgstr ""
+
+#: kitconcept/seo/behaviors/configure.zcml:17
+msgid "Enhances a content type with fields for Search Engine Optimizations"
 msgstr ""
 
 #: kitconcept/seo/configure.zcml:22

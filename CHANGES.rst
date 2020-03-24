@@ -8,6 +8,9 @@ Changelog
 - Add Open Graph title, description and image.
   [timo]
 
+- Add German translation.
+  [timo]
+
 
 1.2.1 (2020-01-16)
 ------------------
