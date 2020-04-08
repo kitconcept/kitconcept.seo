@@ -37,7 +37,6 @@ class ISeo(model.Schema):
             + u"be used. Use maximum 50 characters."
         ),
         required=False,
-        max_length=70,
     )
 
     seo_description = schema.TextLine(
@@ -47,7 +46,6 @@ class ISeo(model.Schema):
             + u"description will be used. Use maximum 150 characters."
         ),
         required=False,
-        max_length=155,
     )
 
     # https://support.google.com/webmasters/answer/93710?hl=en
@@ -97,7 +95,6 @@ class ISeo(model.Schema):
             + u"be used. Use maximum 60 characters."
         ),
         required=False,
-        max_length=100,
     )
 
     opengraph_description = schema.TextLine(
@@ -106,8 +103,7 @@ class ISeo(model.Schema):
             u"Override the Open Graph description, that Facebook and Twitter use. When empty the default "
             + u"description will be used. Use maximum 155 characters."
         ),
-        required=False,
-        max_length=155,
+        required=False
     )
 
     opengraph_image = NamedBlobImage(

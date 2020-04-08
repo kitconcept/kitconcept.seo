@@ -5,7 +5,8 @@ Changelog
 1.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove maxlength parameter from seo fields.
+  [timo]
 
 
 1.3.0 (2020-03-24)
