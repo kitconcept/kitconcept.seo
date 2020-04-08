@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3.1 (unreleased)
+1.4.0 (2020-04-08)
 ------------------
 
 - Remove maxlength parameter from seo fields.
