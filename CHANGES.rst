@@ -5,7 +5,14 @@ Changelog
 1.4.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add Python 3.8/3.9 support
+  [timo]
+
+- Drop Python 2 support.
+  [timo]
+
+- Drop Plone 5 support.
+  [timo]
 
 
 1.4.0 (2020-04-08)
