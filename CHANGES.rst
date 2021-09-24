@@ -13,6 +13,8 @@ Changelog
 
 - Drop Plone 5 support.
   [timo]
+- Add Italian translations.
+  [cekk]
 
 
 1.4.0 (2020-04-08)

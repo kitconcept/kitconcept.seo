@@ -1,0 +1,102 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-03-24 14:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: kitconcept.seo\n"
+
+#: kitconcept/seo/behaviors/seo.py:62
+msgid "Canonical URL"
+msgstr "Canonical URL"
+
+#: kitconcept/seo/behaviors/seo.py:44
+msgid "Description"
+msgstr "Descrizione"
+
+#: kitconcept/seo/behaviors/configure.zcml:17
+msgid "Enhances a content type with fields for Search Engine Optimizations"
+msgstr "Aggiunge dei campi extra ai content type per il SEO"
+
+#: kitconcept/seo/configure.zcml:22
+msgid "Installs the kitconcept.seo add-on."
+msgstr "Installa kitconcept.seo"
+
+#: kitconcept/seo/behaviors/seo.py:55
+msgid "No Index"
+msgstr "No Index"
+
+#: kitconcept/seo/behaviors/seo.py:104
+msgid "Open Graph Description"
+msgstr "Descrizione Open Graph"
+
+#: kitconcept/seo/behaviors/seo.py:114
+msgid "Open Graph Image"
+msgstr "Immagine Open Graph"
+
+#: kitconcept/seo/behaviors/seo.py:94
+msgid "Open Graph Title"
+msgstr "Titolo Open Graph"
+
+#: kitconcept/seo/behaviors/seo.py:105
+msgid "Override the Open Graph description, that Facebook and Twitter use. When empty the default description will be used. Use maximum 155 characters."
+msgstr "Sovrascrive la descrizione per Open Graph, utilizzata da Facebook e Twitter. Se vuoto, verrà utilizzata la descrizione del contenuto. Sarebbe indicato utilizzare al massimo 155 caratteri."
+
+#: kitconcept/seo/behaviors/seo.py:115
+msgid "Override the Open Graph image, that Facebook and Twitter use. When empty the default lead image will be used. Recommended image ratio is 1,91:1 and 1200 x 630px."
+msgstr "Sovrascrive l'immagine per Open Graph, utilizzata da Facebook e Twitter. Se vuoto, verrà utilizzata l'immagine del contenuto (se presente). La proporzione raccomandata è 1,91:1 e 1200 x 630px."
+
+#: kitconcept/seo/behaviors/seo.py:95
+msgid "Override the Open Graph title, that Facebook and Twitter use. When empty the default title will be used. Use maximum 60 characters."
+msgstr "Sovrascrive il titolo per Open Graph, utilizzato da Facebook e Twitter. Se vuoto, verrà utilizzato il titolo del contenuto. Sarebbe indicato utilizzare al massimo 60 caratteri."
+
+#: kitconcept/seo/behaviors/seo.py:45
+msgid "Override the meta description. When empty the default description will be used. Use maximum 150 characters."
+msgstr "Sovrascrive il meta-tag description. Se vuoto, verrà utilizzata la descrizione del contenuto. Sarebbe indicato utilizzare al massimo 150 caratteri."
+
+#: kitconcept/seo/behaviors/seo.py:35
+msgid "Override the meta title. When empty the default title will be used. Use maximum 50 characters."
+msgstr "Sovrascrive il meta-tag title. Se vuoto, verrà utilizzato il titolo del contenuto. Sarebbe indicato utilizzare al massimo 50 caratteri."
+
+#: kitconcept/seo/behaviors/seo.py:56
+msgid "Prevents a page from appearing in search engines"
+msgstr "Impedisce alla pagina di essere indicizzata dai motori di ricerca."
+
+#: kitconcept/seo/behaviors/seo.py:18
+msgid "SEO"
+msgstr "SEO"
+
+#: kitconcept/seo/behaviors/configure.zcml:17
+msgid "SEO Behavior"
+msgstr "SEO Behavior"
+
+#: kitconcept/seo/behaviors/seo.py:63
+msgid "Tells the search engine to choose this URL as the canonical version and crawl that."
+msgstr "Dice ai motori di ricerca di utilizzare l'URL fornito come versione canonica del contenuto corrente, e di conseguenza indicizzano quel contenuto."
+
+#: kitconcept/seo/behaviors/seo.py:34
+msgid "Title"
+msgstr "Titolo"
+
+#: kitconcept/seo/configure.zcml:31
+msgid "Uninstalls the kitconcept.seo add-on."
+msgstr "Disinstalla kitconcept.seo"
+
+#: kitconcept/seo/configure.zcml:22
+msgid "kitconcept.seo"
+msgstr "kitconcept.seo"
+
+#: kitconcept/seo/configure.zcml:31
+msgid "kitconcept.seo (uninstall)"
+msgstr "kitconcept.seo (disinstalla)"
