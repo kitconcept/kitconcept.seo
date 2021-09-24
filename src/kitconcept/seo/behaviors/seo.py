@@ -103,7 +103,7 @@ class ISeo(model.Schema):
             u"Override the Open Graph description, that Facebook and Twitter use. When empty the default "
             + u"description will be used. Use maximum 155 characters."
         ),
-        required=False
+        required=False,
     )
 
     opengraph_image = NamedBlobImage(
