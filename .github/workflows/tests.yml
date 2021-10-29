@@ -13,8 +13,8 @@ jobs:
         plone:
           - "5.2-latest"
         exclude:
-          - plone-version: "5.2-latest"
-            python-version: 3.9
+          - plone: "5.2-latest"
+            python: 3.9
     steps:
       # git checkout
       - uses: actions/checkout@v2
