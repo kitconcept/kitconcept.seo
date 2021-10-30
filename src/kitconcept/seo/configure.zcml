@@ -6,7 +6,7 @@
 
   <i18n:registerTranslations directory="locales" />
 
-  <includeDependencies package="." />
+  <include file="dependencies.zcml" />
 
   <include package=".behaviors" />
   <include package=".browser" />

@@ -5,7 +5,11 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Explicitly include dependencies (supporting pip installations)
+  [ericof]
+
+- Use **plone/setup-plone@v1.0.0** in Github actions
+  [ericof]
 
 
 2.0.0 (2021-09-24)
