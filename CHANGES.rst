@@ -5,7 +5,8 @@ Changelog
 2.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add Plone 6 Support
+  [tisto]
 
 
 2.0.1 (2021-11-01)
@@ -22,13 +23,14 @@ Changelog
 ------------------
 
 - Add Python 3.8/3.9 support
-  [timo]
+  [tisto]
 
 - Drop Python 2 support.
-  [timo]
+  [tisto]
 
 - Drop Plone 5 support.
-  [timo]
+  [tisto]
+
 - Add Italian translations.
   [cekk]
 
@@ -37,54 +39,54 @@ Changelog
 ------------------
 
 - Remove maxlength parameter from seo fields.
-  [timo]
+  [tisto]
 
 
 1.3.0 (2020-03-24)
 ------------------
 
 - Add Open Graph title, description and image.
-  [timo]
+  [tisto]
 
 - Add German translation.
-  [timo]
+  [tisto]
 
 
 1.2.1 (2020-01-16)
 ------------------
 
 - Re-release 1.2.0.
-  [timo]
+  [tisto]
 
 
 1.2.0 (2020-01-16)
 ------------------
 
 - Add canonical_url option.
-  [timo]
+  [tisto]
 
 
 1.1.0 (2020-01-10)
 ------------------
 
 - Add noindex option.
-  [timo]
+  [tisto]
 
 
 1.0.0 (2019-05-14)
 ------------------
 
 - Python 3 compatibility.
-  [timo]
+  [tisto]
 
 - Plone 5.2 compatibility.
-  [timo]
+  [tisto]
 
 - Remove unnecessary plone.directives.form test dependency.
-  [timo]
+  [tisto]
 
 - Use black formatter.
-  [timo]
+  [tisto]
 
 
 1.0.0a1 (2018-07-09)

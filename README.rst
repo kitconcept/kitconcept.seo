@@ -26,8 +26,10 @@ kitconcept.seo
    :alt: kitconcept
    :target: https://kitconcept.com/
 
-SEO enhancements for the Plone Content Management System. Please note that kitconcept.seo is an add-on product for `Volto <https://github.com/plone/volto>`_, the React-based frontend for Plone that will become Plone 6.
-If you are looking for a full featured SEO solution for Plone 4, we suggest looking into `fourdigits.seo <https://pypi.org/project/fourdigits.seo/>`_.
+SEO enhancements for the Plone Content Management System. 
+kitconcept.seo works with the latest Plone 6 and its default frontend `Volto <https://github.com/plone/volto>`_.
+It might still work with Plone Classic but that is not officially supported.
+If you are looking for a full featured SEO solution for Plone Classic or older versions of Plone, we suggest looking into `fourdigits.seo <https://pypi.org/project/fourdigits.seo/>`_.
 
 Features
 --------
@@ -45,8 +47,10 @@ Examples
 
 This add-on can be seen in action at the following sites:
 
+- `FZ Jülich <www.fz-juelich.de>`_
+- `HI Ern <www.hi-ern.de/de>`_
+- `Zeelandia <www.zeelandia.de>`_
 - `VHS Ehrenamtsportal <www.vhs-ehrenamtsportal.de>`_
-
 
 Translations
 ------------
@@ -143,8 +147,8 @@ And finally add this to the jsx code of your component::
         />
 
 
-Usage in Volto
---------------
+Usage
+-----
 In your Volto page you need to go to the edit mode of the page you want to add a title and description for SEO and open the properties of the page by clicking the properties under the save button. Choose SEO there and add a title and description in the fields. When you are done hit the save button.
 
 
