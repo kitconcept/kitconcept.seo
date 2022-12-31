@@ -33,7 +33,7 @@ class SeoBehaviorFunctionalTest(unittest.TestCase):
 
         alsoProvides(self.request, ISeo)
         self.portal.invokeFactory(
-            "seodocument", id="seodocument", title=u"Document with SEO fields"
+            "seodocument", id="seodocument", title="Document with SEO fields"
         )
         import transaction
 

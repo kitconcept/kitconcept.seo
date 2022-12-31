@@ -15,7 +15,7 @@ class ISeo(model.Schema):
 
     model.fieldset(
         "seo",
-        label=_(u"SEO"),
+        label=_("SEO"),
         fields=[
             "seo_title",
             "seo_description",
@@ -33,33 +33,33 @@ class ISeo(model.Schema):
     seo_title = schema.TextLine(
         title=_("Title"),
         description=_(
-            u"Override the meta title. When empty the default title will "
-            + u"be used. Use maximum 50 characters."
+            "Override the meta title. When empty the default title will "
+            + "be used. Use maximum 50 characters."
         ),
         required=False,
     )
 
     seo_description = schema.TextLine(
-        title=_(u"Description"),
+        title=_("Description"),
         description=_(
-            u"Override the meta description. When empty the default "
-            + u"description will be used. Use maximum 150 characters."
+            "Override the meta description. When empty the default "
+            + "description will be used. Use maximum 150 characters."
         ),
         required=False,
     )
 
     # https://support.google.com/webmasters/answer/93710?hl=en
     seo_noindex = schema.Bool(
-        title=_(u"No Index"),
-        description=_(u"Prevents a page from appearing in search engines"),
+        title=_("No Index"),
+        description=_("Prevents a page from appearing in search engines"),
         required=False,
     )
 
     # https://support.google.com/webmasters/answer/139066?hl=en
     seo_canonical_url = schema.URI(
-        title=_(u"Canonical URL"),
+        title=_("Canonical URL"),
         description=_(
-            u"Tells the search engine to choose this URL as the canonical version and crawl that."
+            "Tells the search engine to choose this URL as the canonical version and crawl that."
         ),
         required=False,
     )
@@ -91,26 +91,26 @@ class ISeo(model.Schema):
     opengraph_title = schema.TextLine(
         title=_("Open Graph Title"),
         description=_(
-            u"Override the Open Graph title, that Facebook and Twitter use. When empty the default title will "
-            + u"be used. Use maximum 60 characters."
+            "Override the Open Graph title, that Facebook and Twitter use. When empty the default title will "
+            + "be used. Use maximum 60 characters."
         ),
         required=False,
     )
 
     opengraph_description = schema.TextLine(
-        title=_(u"Open Graph Description"),
+        title=_("Open Graph Description"),
         description=_(
-            u"Override the Open Graph description, that Facebook and Twitter use. When empty the default "
-            + u"description will be used. Use maximum 155 characters."
+            "Override the Open Graph description, that Facebook and Twitter use. When empty the default "
+            + "description will be used. Use maximum 155 characters."
         ),
         required=False,
     )
 
     opengraph_image = NamedBlobImage(
-        title=_(u"Open Graph Image"),
+        title=_("Open Graph Image"),
         description=_(
-            u"Override the Open Graph image, that Facebook and Twitter use. When empty the default "
-            + u"lead image will be used. Recommended image ratio is 1,91:1 and 1200 x 630px."
+            "Override the Open Graph image, that Facebook and Twitter use. When empty the default "
+            + "lead image will be used. Recommended image ratio is 1,91:1 and 1200 x 630px."
         ),
         required=False,
     )
