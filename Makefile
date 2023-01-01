@@ -3,7 +3,7 @@
 SHELL := /bin/bash
 CURRENT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-version = 3
+version = 3.8
 
 # We like colors
 # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
@@ -76,6 +76,11 @@ build-plone-5.2: .installed.cfg  ## Build Plone 5.2
 	bin/pip install --upgrade pip
 	bin/pip install -r requirements.txt
 	bin/buildout -c plone-5.2.x.cfg
+
+.PHONY: Build Plone 6.0
+build-plone-6.0: bin/python  ## Build Plone 6.0
+	bin/pip install -r https://dist.plone.org/release/6.0.0/requirements.txt
+	bin/buildout -c plone-6.0.x.cfg
 
 .PHONY: Build Plone 5.2 Performance
 build-plone-5.2-performance: .installed.cfg  ## Build Plone 5.2
