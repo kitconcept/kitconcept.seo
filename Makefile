@@ -79,7 +79,7 @@ build-plone-5.2: .installed.cfg  ## Build Plone 5.2
 
 .PHONY: Build Plone 6.0
 build-plone-6.0: bin/python  ## Build Plone 6.0
-	bin/pip install -r https://dist.plone.org/release/6.0.0/requirements.txt
+	bin/pip install -r https://dist.plone.org/release/6.0.9/requirements.txt
 	bin/buildout -c plone-6.0.x.cfg
 
 .PHONY: Build Plone 5.2 Performance
