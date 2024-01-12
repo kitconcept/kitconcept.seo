@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from kitconcept.seo import _
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
@@ -118,6 +117,6 @@ class ISeo(model.Schema):
 
 @implementer(ISeo)
 @adapter(IDexterityContent)
-class Seo(object):
+class Seo:
     def __init__(self, context):
         self.context = context
