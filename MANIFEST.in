@@ -5,3 +5,5 @@ exclude *.png
 exclude requirements.txt
 exclude Makefile
 global-exclude *.pyc
+exclude .coveragerc
+exclude *.cfg
