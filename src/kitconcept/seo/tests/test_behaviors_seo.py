@@ -13,7 +13,6 @@ import unittest
 
 
 class SeoBehaviorFunctionalTest(unittest.TestCase):
-
     layer = KITCONCEPT_SEO_FUNCTIONAL_TESTING
 
     def setUp(self):

@@ -28,7 +28,6 @@ class TestSetup(unittest.TestCase):
 
 
 class TestUninstall(unittest.TestCase):
-
     layer = KITCONCEPT_SEO_INTEGRATION_TESTING
 
     def setUp(self):
