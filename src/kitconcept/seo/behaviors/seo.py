@@ -12,7 +12,6 @@ from zope.interface import provider
 
 @provider(IFormFieldProvider)
 class ISeo(model.Schema):
-
     model.fieldset(
         "seo",
         label=_("SEO"),
