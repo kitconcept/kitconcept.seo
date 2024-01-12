@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from kitconcept.seo.interfaces import IKitconceptSeoLayer
 from kitconcept.seo.testing import KITCONCEPT_SEO_FUNCTIONAL_TESTING  # noqa
 from plone.app.testing import setRoles
@@ -13,7 +12,6 @@ import unittest
 
 
 class SeoBehaviorFunctionalTest(unittest.TestCase):
-
     layer = KITCONCEPT_SEO_FUNCTIONAL_TESTING
 
     def setUp(self):
@@ -43,7 +41,7 @@ class SeoBehaviorFunctionalTest(unittest.TestCase):
         self.browser.handleErrors = False
         self.browser.addHeader(
             "Authorization",
-            "Basic {0}:{1}".format(SITE_OWNER_NAME, SITE_OWNER_PASSWORD),
+            f"Basic {SITE_OWNER_NAME}:{SITE_OWNER_PASSWORD}",
         )
 
     def test_seo_fieldset_in_edit_form(self):

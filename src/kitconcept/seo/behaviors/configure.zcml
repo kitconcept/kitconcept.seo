@@ -2,18 +2,22 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:zcml="http://namespaces.zope.org/zcml"
-    i18n_domain="kitconcept.seo">
+    i18n_domain="kitconcept.seo"
+    >
 
-  <include package="plone.behavior" file="meta.zcml"/>
+  <include
+      package="plone.behavior"
+      file="meta.zcml"
+      />
 
   <plone:behavior
-    name="kitconcept.seo"
-    title="SEO Behavior"
-    description="Enhances a content type with fields for Search Engine Optimizations"
-    provides=".seo.ISeo"
-    factory=".seo.Seo"
-    for="plone.dexterity.interfaces.IDexterityContent"
-    marker=".seo.ISeo"
-    />
+      name="kitconcept.seo"
+      title="SEO Behavior"
+      description="Enhances a content type with fields for Search Engine Optimizations"
+      factory=".seo.Seo"
+      provides=".seo.ISeo"
+      for="plone.dexterity.interfaces.IDexterityContent"
+      marker=".seo.ISeo"
+      />
 
 </configure>
