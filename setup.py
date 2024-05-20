@@ -50,7 +50,7 @@ setup(
     python_requires=">=3.8",
     install_requires=[
         "setuptools",
-        "Plone",
+        "Products.CMFPlone",
         "plone.restapi",
         "plone.behavior",
     ],
