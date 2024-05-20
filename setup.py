@@ -51,8 +51,14 @@ setup(
     install_requires=[
         "setuptools",
         "Products.CMFPlone",
-        "plone.restapi",
+        "plone.app.contenttypes",
+        "plone.app.dexterity",
+        "plone.autoform",
         "plone.behavior",
+        "plone.dexterity",
+        "plone.namedfile",
+        "plone.restapi",
+        "plone.supermodel",
     ],
     extras_require={
         "test": [
