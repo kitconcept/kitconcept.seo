@@ -1,4 +1,5 @@
 """Installer for the kitconcept.seo package."""
+
 from pathlib import Path
 from setuptools import find_packages
 from setuptools import setup
@@ -51,8 +52,8 @@ setup(
     install_requires=[
         "setuptools",
         "Plone",
-        "plone.api",
         "plone.restapi",
+        "plone.behavior",
     ],
     extras_require={
         "test": [
