@@ -1,6 +1,0 @@
-[report]
-include =
-    src/kitconcept/*
-omit =
-    */test*
-    */upgrades/*

@@ -1,44 +1,49 @@
-# -*- coding: utf-8 -*-
 from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
-from plone.testing import z2
+from plone.testing.zope import WSGI_SERVER_FIXTURE
 
-import kitconcept.seo
+import kitconcept.seo  # noQA
 
 
-class KitconceptSeoLayer(PloneSandboxLayer):
-
+class Layer(PloneSandboxLayer):
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
+        import plone.restapi
+
+        self.loadZCML(package=plone.restapi)
         self.loadZCML(package=kitconcept.seo)
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, "kitconcept.seo:default")
 
 
-KITCONCEPT_SEO_FIXTURE = KitconceptSeoLayer()
+FIXTURE = Layer()
 
-
-KITCONCEPT_SEO_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(KITCONCEPT_SEO_FIXTURE,), name="KitconceptSeoLayer:IntegrationTesting"
+INTEGRATION_TESTING = IntegrationTesting(
+    bases=(FIXTURE,),
+    name="Kitconcept.SeoLayer:IntegrationTesting",
 )
 
 
-KITCONCEPT_SEO_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(KITCONCEPT_SEO_FIXTURE, z2.ZSERVER_FIXTURE),
-    name="KitconceptSeoLayer:FunctionalTesting",
+FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(FIXTURE, WSGI_SERVER_FIXTURE),
+    name="Kitconcept.SeoLayer:FunctionalTesting",
 )
 
 
-KITCONCEPT_SEO_ACCEPTANCE_TESTING = FunctionalTesting(
-    bases=(KITCONCEPT_SEO_FIXTURE, REMOTE_LIBRARY_BUNDLE_FIXTURE, z2.ZSERVER_FIXTURE),
-    name="KitconceptSeoLayer:AcceptanceTesting",
+ACCEPTANCE_TESTING = FunctionalTesting(
+    bases=(
+        FIXTURE,
+        REMOTE_LIBRARY_BUNDLE_FIXTURE,
+        WSGI_SERVER_FIXTURE,
+    ),
+    name="Kitconcept.SeoLayer:AcceptanceTesting",
 )
