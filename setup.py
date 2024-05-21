@@ -69,6 +69,7 @@ setup(
             "pytest",
             "pytest-cov",
             "pytest-plone>=0.2.0",
+            "plone.app.contenttypes",
         ],
     },
     entry_points="""
