@@ -1,6 +1,12 @@
-<configure xmlns="http://namespaces.zope.org/zope">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    >
 
-  <!-- List all packages you depend here -->
-  <include package="plone.restapi" />
+  <include
+      package="Products.GenericSetup"
+      file="meta.zcml"
+      />
+  <include package="Products.GenericSetup" />
 
 </configure>
