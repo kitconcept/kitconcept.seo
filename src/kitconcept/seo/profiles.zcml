@@ -7,7 +7,7 @@
   <genericsetup:registerProfile
       name="default"
       title="kitconcept seo: Install"
-      description="Package to configure a new kitconcept seo site"
+      description="Installs the kitconcept.seo add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/default"
       />
@@ -15,7 +15,7 @@
   <genericsetup:registerProfile
       name="uninstall"
       title="kitconcept seo: Uninstall"
-      description="Uninstall kitconcept seo setup."
+      description="Uninstalls the kitconcept.seo add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/uninstall"
       />
