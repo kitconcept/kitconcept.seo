@@ -51,25 +51,22 @@ setup(
     install_requires=[
         "setuptools",
         "Products.CMFPlone",
-        "plone.app.contenttypes",
         "plone.app.dexterity",
         "plone.autoform",
         "plone.behavior",
         "plone.dexterity",
         "plone.namedfile",
-        "plone.restapi",
         "plone.supermodel",
     ],
     extras_require={
         "test": [
             "zest.releaser[recommended]",
             "zestreleaser.towncrier",
+            "plone.app.contenttypes[test]",
             "plone.app.testing",
-            "plone.restapi[test]",
             "pytest",
             "pytest-cov",
             "pytest-plone>=0.2.0",
-            "plone.app.contenttypes",
         ],
     },
     entry_points="""
