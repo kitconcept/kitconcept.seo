@@ -16,6 +16,6 @@
   <include file="dependencies.zcml" />
   <include file="profiles.zcml" />
 
-  <subscriber handler=".events.after_image_pub_traversal" />
+  <subscriber handler=".subscribers.add_x_robots_noindex_header" />
 
 </configure>
