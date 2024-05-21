@@ -1,6 +1,6 @@
 def test_seo_behavior_fields(manager_plone_client):
     # Enable behavior for pages
-    resp = manager_plone_client.patch(
+    manager_plone_client.patch(
         "/@controlpanels/dexterity-types/Document", json={"kitconcept.seo": True}
     )
 

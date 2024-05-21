@@ -4,6 +4,7 @@ from plone.app.testing import SITE_OWNER_NAME
 from plone.app.testing import SITE_OWNER_PASSWORD
 from plone.restapi.testing import RelativeSession
 from pytest_plone import fixtures_factory
+
 import pytest
 
 

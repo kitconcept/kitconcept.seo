@@ -118,7 +118,7 @@ Zope = [
   'Products.CMFCore', 'Products.CMFDynamicViewFTI',
 ]
 python-dateutil = ['dateutil']
-ignore-packages = ['zestreleaser.towncrier', 'zest.releaser', 'pytest', 'pytest-cov', 'pytest-plone']
+ignore-packages = ['zestreleaser.towncrier', 'zest.releaser', 'pytest', 'pytest-cov', 'pytest-plone', 'plone.app.iterate']
 'plone.app.testing' = ['plone.testing']
 'Products.CMFPlone' = ['Products.CMFCore', 'Products.GenericSetup']
 
