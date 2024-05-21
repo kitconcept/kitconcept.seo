@@ -64,6 +64,10 @@ setup(
             "zestreleaser.towncrier",
             "plone.app.contenttypes[test]",
             "plone.app.testing",
+            "plone.restapi[test]",
+            # Undeclared dependency of plone.restapi,
+            # can be removed after next release
+            "plone.app.iterate",
             "pytest",
             "pytest-cov",
             "pytest-plone>=0.2.0",

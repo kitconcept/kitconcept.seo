@@ -15,10 +15,14 @@ class Layer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
+        import plone.restapi
+
         self.loadZCML(package=kitconcept.seo)
+        self.loadZCML(package=plone.restapi)
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, "kitconcept.seo:default")
+        applyProfile(portal, "plone.restapi:default")
 
 
 FIXTURE = Layer()
