@@ -1,3 +1,3 @@
 # Contributors
 
-- collective [collective@plone.org]
+- kitconcept GmbH [info@kitconcept.com]

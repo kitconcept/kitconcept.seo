@@ -16,3 +16,4 @@ recursive-exclude frontend *
 exclude instance.yaml
 global-exclude *.pyc
 global-exclude .DS_Store
+exclude *.png
