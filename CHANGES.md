@@ -1,16 +1,21 @@
-Changelog
-=========
+# Changelog
 
+<!--
+   You should *NOT* be adding new change log entries to this file.
+   You should create a file in the news directory instead.
+   For helpful instructions, please see:
+   https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+-->
 
-2.0.2 (unreleased)
-------------------
+<!-- towncrier release notes start -->
+
+## 2.0.2 (unreleased)
 
 - Add Plone 6 Support
   [tisto]
 
 
-2.0.1 (2021-11-01)
-------------------
+## 2.0.1 (2021-11-01)
 
 - Explicitly include dependencies (supporting pip installations)
   [ericof]
@@ -19,8 +24,7 @@ Changelog
   [ericof]
 
 
-2.0.0 (2021-09-24)
-------------------
+## 2.0.0 (2021-09-24)
 
 - Add Python 3.8/3.9 support
   [tisto]
@@ -35,15 +39,13 @@ Changelog
   [cekk]
 
 
-1.4.0 (2020-04-08)
-------------------
+## 1.4.0 (2020-04-08)
 
 - Remove maxlength parameter from seo fields.
   [tisto]
 
 
-1.3.0 (2020-03-24)
-------------------
+## 1.3.0 (2020-03-24)
 
 - Add Open Graph title, description and image.
   [tisto]
@@ -52,29 +54,25 @@ Changelog
   [tisto]
 
 
-1.2.1 (2020-01-16)
-------------------
+## 1.2.1 (2020-01-16)
 
 - Re-release 1.2.0.
   [tisto]
 
 
-1.2.0 (2020-01-16)
-------------------
+## 1.2.0 (2020-01-16)
 
 - Add canonical_url option.
   [tisto]
 
 
-1.1.0 (2020-01-10)
-------------------
+## 1.1.0 (2020-01-10)
 
 - Add noindex option.
   [tisto]
 
 
-1.0.0 (2019-05-14)
-------------------
+## 1.0.0 (2019-05-14)
 
 - Python 3 compatibility.
   [tisto]
@@ -89,8 +87,7 @@ Changelog
   [tisto]
 
 
-1.0.0a1 (2018-07-09)
---------------------
+## 1.0.0a1 (2018-07-09)
 
 - Initial release.
   [kitconcept]

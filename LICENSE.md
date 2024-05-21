@@ -1,4 +1,4 @@
-kitconcept.seo Copyright 2018, kitconcept GmbH
+kitconcept.seo Copyright 2023, Plone Community
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2

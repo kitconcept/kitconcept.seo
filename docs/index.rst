@@ -1,5 +1,0 @@
-====================
-kitconcept.seo
-====================
-
-User documentation

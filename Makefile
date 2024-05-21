@@ -1,9 +1,12 @@
-# keep in sync with: https://github.com/kitconcept/buildout/edit/master/Makefile
-# update by running 'make update'
-SHELL := /bin/bash
-CURRENT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-
-version = 3.8
+### Defensive settings for make:
+#     https://tech.davis-hansson.com/p/make/
+SHELL:=bash
+.ONESHELL:
+.SHELLFLAGS:=-xeu -o pipefail -O inherit_errexit -c
+.SILENT:
+.DELETE_ON_ERROR:
+MAKEFLAGS+=--warn-undefined-variables
+MAKEFLAGS+=--no-builtin-rules
 
 # We like colors
 # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
@@ -12,7 +15,29 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-all: .installed.cfg
+PLONE6=6.0-latest
+
+# Python checks
+PYTHON?=python3
+
+# installed?
+ifeq (, $(shell which $(PYTHON) ))
+  $(error "PYTHON=$(PYTHON) not found in $(PATH)")
+endif
+
+# version ok?
+PYTHON_VERSION_MIN=3.8
+PYTHON_VERSION_OK=$(shell $(PYTHON) -c "import sys; print((int(sys.version_info[0]), int(sys.version_info[1])) >= tuple(map(int, '$(PYTHON_VERSION_MIN)'.split('.'))))")
+ifeq ($(PYTHON_VERSION_OK),0)
+  $(error "Need python $(PYTHON_VERSION) >= $(PYTHON_VERSION_MIN)")
+endif
+
+BACKEND_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+
+GIT_FOLDER=$(BACKEND_FOLDER)/.git
+
+
+all: build
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
@@ -20,106 +45,68 @@ all: .installed.cfg
 help: ## This help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: Update Makefile and Buildout
-update: ## Update Make and Buildout
-	wget -O Makefile https://raw.githubusercontent.com/kitconcept/buildout/master/Makefile
-	wget -O requirements.txt https://raw.githubusercontent.com/kitconcept/buildout/master/requirements.txt
-	wget -O plone-4.3.x.cfg https://raw.githubusercontent.com/kitconcept/buildout/master/plone-4.3.x.cfg
-	wget -O plone-5.1.x.cfg https://raw.githubusercontent.com/kitconcept/buildout/master/plone-5.1.x.cfg
-	wget -O plone-5.2.x.cfg https://raw.githubusercontent.com/kitconcept/buildout/master/plone-5.2.x.cfg
-	wget -O ci.cfg https://raw.githubusercontent.com/kitconcept/buildout/master/ci.cfg
-	wget -O versions.cfg https://raw.githubusercontent.com/kitconcept/buildout/master/versions.cfg
+bin/pip bin/tox bin/mxdev:
+	@echo "$(GREEN)==> Setup Virtual Env$(RESET)"
+	$(PYTHON) -m venv .
+	bin/pip install -U "pip" "wheel" "cookiecutter" "mxdev" "tox" "pre-commit"
+	if [ -d $(GIT_FOLDER) ]; then bin/pre-commit install; else echo "$(RED) Not installing pre-commit$(RESET)";fi
 
-.installed.cfg: bin/buildout *.cfg
-	bin/buildout
+.PHONY: config
+config: bin/pip  ## Create instance configuration
+	@echo "$(GREEN)==> Create instance configuration$(RESET)"
+	bin/cookiecutter -f --no-input --config-file instance.yaml gh:plone/cookiecutter-zope-instance
 
-bin/buildout: bin/pip
-	bin/pip install --upgrade pip
-	bin/pip install -r requirements.txt
-	bin/pip install black || true
-	@touch -c $@
+.PHONY: build-dev
+build-dev: config ## pip install Plone packages
+	@echo "$(GREEN)==> Setup Build$(RESET)"
+	bin/mxdev -c mx.ini
+	bin/pip install -r requirements-mxdev.txt
 
-bin/python bin/pip:
-	python$(version) -m venv . || virtualenv --python=python$(version) .
+.PHONY: install
+install: build-dev ## Install Plone 6.0
 
-py2:
-	virtualenv --python=python2 .
-	bin/pip install --upgrade pip
-	bin/pip install -r requirements.txt
 
-.PHONY: Build Plone 4.3
-build-plone-4.3: py2 ## Build Plone 4.3
-	bin/pip install --upgrade pip
-	bin/pip install -r requirements.txt
-	bin/buildout -c plone-4.3.x.cfg
+.PHONY: build
+build: build-dev ## Install Plone 6.0
 
-.PHONY: Build Plone 5.0
-build-plone-5.0: py2 ## Build Plone 5.0
-	bin/pip install --upgrade pip
-	bin/pip install -r requirements.txt
-	bin/buildout -c plone-5.0.x.cfg
 
-.PHONY: Build Plone 5.1
-build-plone-5.1: py2  ## Build Plone 5.1
-	bin/pip install --upgrade pip
-	bin/pip install -r requirements.txt
-	bin/buildout -c plone-5.1.x.cfg
+.PHONY: clean
+clean: ## Remove old virtualenv and creates a new one
+	@echo "$(RED)==> Cleaning environment and build$(RESET)"
+	rm -rf bin lib lib64 include share etc var inituser pyvenv.cfg .installed.cfg instance .tox .pytest_cache
 
-.PHONY: Build Plone 5.2 with Python 2
-build-plone-5.2-py: py2  ## Build Plone 5.2 with Python 2
-	bin/pip install --upgrade pip
-	bin/pip install -r requirements.txt
-	bin/buildout -c plone-5.2.x.cfg
+.PHONY: start
+start: ## Start a Plone instance on localhost:8080
+	PYTHONWARNINGS=ignore ./bin/runwsgi instance/etc/zope.ini
 
-.PHONY: Build Plone 5.2
-build-plone-5.2: .installed.cfg  ## Build Plone 5.2
-	bin/pip install --upgrade pip
-	bin/pip install -r requirements.txt
-	bin/buildout -c plone-5.2.x.cfg
+.PHONY: console
+console: ## Start a zope console
+	PYTHONWARNINGS=ignore ./bin/zconsole debug instance/etc/zope.conf
 
-.PHONY: Build Plone 6.0
-build-plone-6.0: bin/python  ## Build Plone 6.0
-	bin/pip install -r https://dist.plone.org/release/6.0.0/requirements.txt
-	bin/buildout -c plone-6.0.x.cfg
+.PHONY: format
+format: bin/tox ## Format the codebase according to our standards
+	@echo "$(GREEN)==> Format codebase$(RESET)"
+	bin/tox -e format
 
-.PHONY: Build Plone 5.2 Performance
-build-plone-5.2-performance: .installed.cfg  ## Build Plone 5.2
-	bin/pip install --upgrade pip
-	bin/pip install -r requirements.txt
-	bin/buildout -c plone-5.2.x-performance.cfg
+.PHONY: lint
+lint: ## check code style
+	bin/tox -e lint
 
-.PHONY: Test
-test:  ## Test
-	bin/test
+# i18n
+bin/i18ndude: bin/pip
+	@echo "$(GREEN)==> Install translation tools$(RESET)"
+	bin/pip install i18ndude
 
-.PHONY: Test Performance
-test-performance:
-	jmeter -n -t performance.jmx -l jmeter.jtl
+.PHONY: i18n
+i18n: bin/i18ndude ## Update locales
+	@echo "$(GREEN)==> Updating locales$(RESET)"
+	bin/update_dist_locale
 
-.PHONY: Code Analysis
-code-analysis:  ## Code Analysis
-	bin/code-analysis
-	if [ -f "bin/black" ]; then bin/black src/ --check ; fi
+# Tests
+.PHONY: test
+test: bin/tox ## run tests
+	bin/tox -e test
 
-.PHONY: Black
-black:  ## Black
-	bin/code-analysis
-	if [ -f "bin/black" ]; then bin/black src/ ; fi
-
-.PHONY: Build Docs
-docs:  ## Build Docs
-	bin/sphinxbuilder
-
-.PHONY: Test Release
-test-release:  ## Run Pyroma and Check Manifest
-	bin/pyroma -n 10 -d .
-
-.PHONY: Release
-release:  ## Release
-	bin/fullrelease
-
-.PHONY: Clean
-clean:  ## Clean
-	git clean -Xdf
-
-.PHONY: all clean
+.PHONY: test-coverage
+test-coverage: bin/tox ## run tests with coverage
+	bin/tox -e coverage
