@@ -23,6 +23,7 @@ If you are looking for a full featured SEO solution for Plone Classic or older v
 
 This add-on can be seen in action at the following sites:
 
+- [German Aerospace Center (DLR)](www.dlr.de)
 - [FZ Jülich](www.fz-juelich.de)
 - [HI Ern](www.hi-ern.de/de)
 - [Zeelandia](www.zeelandia.de)
