@@ -11,10 +11,9 @@
       file="permissions.zcml"
       />
 
+  <include package=".behaviors" />
+
   <include file="dependencies.zcml" />
   <include file="profiles.zcml" />
-
-  <include package=".serializers" />
-  <include package=".behaviors" />
 
 </configure>
