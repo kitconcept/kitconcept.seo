@@ -24,6 +24,6 @@ globals().update(
 @pytest.fixture
 def manager_plone_client(functional):
     portal = functional["portal"]
-    api_session = RelativeSession(f"{portal.absolute_url()}/++api++")
+    api_session = RelativeSession(f"{portal.absolute_url()}")
     api_session.auth = (SITE_OWNER_NAME, SITE_OWNER_PASSWORD)
     return api_session
