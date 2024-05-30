@@ -9,6 +9,19 @@
 
 <!-- towncrier release notes start -->
 
+## 2.1.0 (2024-05-30)
+
+
+### New features:
+
+- Add Plone 6 Support. @tisto (#13)
+- Set the X-Robots-Tag response header when seo_noindex is True. @sneridagh, @davisagli (#17)
+
+### Internal:
+
+- Update internal package structure. @sneridagh, @davisagli (#16)
+
+
 ## 2.0.1 (2021-11-01)
 
 - Explicitly include dependencies (supporting pip installations)
