@@ -16,4 +16,6 @@
   <include file="dependencies.zcml" />
   <include file="profiles.zcml" />
 
+  <subscriber handler=".subscribers.add_x_robots_noindex_header" />
+
 </configure>
