@@ -48,8 +48,7 @@ And to create the Plone site:
 make create_site
 ```
 
-Enable the SEO behavior
-^^^^^^^^^^^^^^^^^^^^^^^
+# Enable the SEO behavior
 
 To enable the SEO tab for a specific content type you have to enable the kitconcept.seo behavior.
 Go to the page setup and then to the Dexterity Content Types control panel.
