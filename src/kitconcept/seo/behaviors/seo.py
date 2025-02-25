@@ -7,6 +7,7 @@ from zope import schema
 from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import provider
+from plone.autoform import directives
 
 
 @provider(IFormFieldProvider)
@@ -28,20 +29,38 @@ class ISeo(model.Schema):
         ],
     )
 
+    directives.widget(
+        "seo_title",
+        frontendOptions={
+            "widgetProps": {
+                "maxLength": 55,
+            }
+        },
+    )
+
+    directives.widget(
+        "seo_description",
+        frontendOptions={
+            "widgetProps": {
+                "maxLength": 155,
+            }
+        },
+    )
+
     seo_title = schema.TextLine(
         title=_("Title"),
         description=_(
             "Override the meta title. When empty the default title will "
-            + "be used. Use maximum 50 characters."
+            + "be used. Use maximum 55 characters."
         ),
         required=False,
     )
 
-    seo_description = schema.TextLine(
+    seo_description = schema.Text(
         title=_("Description"),
         description=_(
             "Override the meta description. When empty the default "
-            + "description will be used. Use maximum 150 characters."
+            + "description will be used. Use maximum 155 characters."
         ),
         required=False,
     )
