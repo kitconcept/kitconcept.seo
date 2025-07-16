@@ -35,6 +35,8 @@ This product has been translated into
 
 - German
 
+- Spanish
+
 ## Installation
 
 Install kitconcept.seo with `pip`:
