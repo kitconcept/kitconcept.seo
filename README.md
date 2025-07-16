@@ -6,8 +6,8 @@
 
 [![kitconcept, GmbH](https://raw.githubusercontent.com/kitconcept/kitconcept.seo/master/kitconcept.png)](https://kitconcept.com/)
 
-SEO enhancements for the Plone Content Management System.
-kitconcept.seo works with the latest Plone 6 and its default frontend [Volto](https://github.com/plone/volto).
+[SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) enhancements for the Plone Content Management System.
+`kitconcept.seo` works with the latest Plone 6 and its default frontend [Volto](https://github.com/plone/volto).
 It might still work with Plone Classic but that is not officially supported.
 If you are looking for a full featured SEO solution for Plone Classic or older versions of Plone, we suggest looking into [fourdigits.seo](https://pypi.org/project/fourdigits.seo/).
 
@@ -35,6 +35,8 @@ This product has been translated into
 
 - German
 
+- Italian
+
 - Spanish
 
 ## Installation
@@ -52,13 +54,13 @@ make create_site
 
 # Enable the SEO behavior
 
-To enable the SEO tab for a specific content type you have to enable the kitconcept.seo behavior.
+To enable the SEO tab for a specific content type you have to enable the `kitconcept.seo` behavior.
 Go to the page setup and then to the Dexterity Content Types control panel.
 Choose the content type you want to enable SEO for and enable the `kitconcept.seo` behavior.
 
 ## Enable the SEO behavior programmatically
 
-Enable the kitconcept.seo behavior by adding the behavior to the Factory Type Information (FTI) of your type in your generic setup profile. E.g. to enable SEO for the document type, drop a Document.xml file into the `profiles/default/types` folder of your add-on product with the following content:
+Enable the `kitconcept.seo` behavior by adding the behavior to the Factory Type Information (FTI) of your type in your generic setup profile. E.g. to enable SEO for the document type, drop a `Document.xml` file into the `profiles/default/types` folder of your add-on product with the following content:
 
 ```xml
    <?xml version="1.0" encoding="utf-8"?>
