@@ -9,6 +9,18 @@
 
 <!-- towncrier release notes start -->
 
+## 2.1.1 (2025-11-04)
+
+### New features:
+
+- Add Spanish translations #22 [macagua] (#22)
+
+### Internal:
+
+- Fix metadata for the package. @ericof
+- Use pkgutil instead of deprecated pkg_resources. @ericof
+
+
 ## 2.1.0 (2024-05-30)
 
 
