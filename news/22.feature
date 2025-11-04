@@ -1,0 +1,1 @@
+Add Spanish translations #22 [macagua]
