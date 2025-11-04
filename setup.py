@@ -1,7 +1,7 @@
 """Installer for the kitconcept.seo package."""
 
 from pathlib import Path
-from setuptools import find_packages
+from setuptools import find_namespace_packages
 from setuptools import setup
 
 
@@ -30,7 +30,6 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Operating System :: OS Independent",
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
     keywords="Python Plone CMS",
     author="kitconcept GmbH",
@@ -42,7 +41,7 @@ setup(
         "Tracker": "https://github.com/kitconcept/kitconcept.seo/issues",
     },
     license="GPL version 2",
-    packages=find_packages("src", exclude=["ez_setup"]),
+    packages=find_namespace_packages(where="src/", include=["kitconcept.*"]),
     namespace_packages=["kitconcept"],
     package_dir={"": "src"},
     include_package_data=True,
