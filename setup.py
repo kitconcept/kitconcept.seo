@@ -1,7 +1,6 @@
 """Installer for the kitconcept.seo package."""
 
 from pathlib import Path
-from setuptools import find_namespace_packages
 from setuptools import setup
 
 
@@ -41,9 +40,6 @@ setup(
         "Tracker": "https://github.com/kitconcept/kitconcept.seo/issues",
     },
     license="GPL version 2",
-    packages=find_namespace_packages(where="src/", include=["kitconcept.*"]),
-    namespace_packages=["kitconcept"],
-    package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
     python_requires=">=3.8",
