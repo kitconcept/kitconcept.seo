@@ -32,8 +32,9 @@ class ISeo(model.Schema):
         title=_("Title"),
         description=_(
             "Override the meta title. When empty the default title will "
-            + "be used. Use maximum 50 characters."
+            + "be used. Use maximum 55 characters."
         ),
+        max_length = 55,
         required=False,
     )
 
@@ -41,8 +42,9 @@ class ISeo(model.Schema):
         title=_("Description"),
         description=_(
             "Override the meta description. When empty the default "
-            + "description will be used. Use maximum 150 characters."
+            + "description will be used. Use maximum 155 characters."
         ),
+        max_length = 155,
         required=False,
     )
 
