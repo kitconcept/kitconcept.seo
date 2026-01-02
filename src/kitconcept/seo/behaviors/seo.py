@@ -1,4 +1,5 @@
 from kitconcept.seo import _
+from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
 from plone.namedfile.field import NamedBlobImage
@@ -28,20 +29,36 @@ class ISeo(model.Schema):
         ],
     )
 
+    directives.widget(
+        "seo_title",
+        frontendOptions={
+            "widget": "soft_text_widget",
+            "widgetProps": {"softMaxLength": "55"},
+        },
+    )
+
     seo_title = schema.TextLine(
         title=_("Title"),
         description=_(
             "Override the meta title. When empty the default title will "
-            + "be used. Use maximum 50 characters."
+            + "be used. Use maximum 55 characters."
         ),
         required=False,
+    )
+
+    directives.widget(
+        "seo_description",
+        frontendOptions={
+            "widget": "soft_text_area_widget",
+            "widgetProps": {"softMaxLength": "155"},
+        },
     )
 
     seo_description = schema.TextLine(
         title=_("Description"),
         description=_(
             "Override the meta description. When empty the default "
-            + "description will be used. Use maximum 150 characters."
+            + "description will be used. Use maximum 155 characters."
         ),
         required=False,
     )
