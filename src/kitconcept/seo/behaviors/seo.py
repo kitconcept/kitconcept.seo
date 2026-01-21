@@ -32,7 +32,7 @@ class ISeo(model.Schema):
     directives.widget(
         "seo_title",
         frontendOptions={
-            "widget": "soft_text_widget",
+            "widget": "softTextWidget",
             "widgetProps": {"softMaxLength": "55"},
         },
     )
@@ -49,7 +49,7 @@ class ISeo(model.Schema):
     directives.widget(
         "seo_description",
         frontendOptions={
-            "widget": "soft_text_area_widget",
+            "widget": "softTextareaWidget",
             "widgetProps": {"softMaxLength": "155"},
         },
     )
