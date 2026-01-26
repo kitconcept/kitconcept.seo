@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.1.2 (2026-01-26)
+
+### Bug fixes:
+
+- Add new widget for seo title and description. @iFlameing
+
+
 ## 2.1.1 (2025-11-04)
 
 ### New features:
