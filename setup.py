@@ -14,7 +14,7 @@ long_description = f"""
 
 setup(
     name="kitconcept.seo",
-    version="2.1.2",
+    version="2.1.3.dev0",
     description="SEO optimizations plugin for Plone",
     long_description=long_description,
     long_description_content_type="text/markdown",
