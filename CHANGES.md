@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.1.3 (2026-01-27)
+
+### Bug fixes:
+
+- Fix removal of pkg_resources namespace. @davisagli
+
+
 ## 2.1.2 (2026-01-26)
 
 ### Bug fixes:
