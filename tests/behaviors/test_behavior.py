@@ -1,7 +1,8 @@
 def test_seo_behavior_fields(manager_plone_client):
     # Enable behavior for pages
     manager_plone_client.patch(
-        "++api++/@controlpanels/dexterity-types/Document", json={"kitconcept.seo": True}
+        "++api++/@controlpanels/dexterity-types/Document",
+        json={"kitconcept.seo": True},
     )
 
     # Check schema
@@ -26,7 +27,8 @@ def test_seo_behavior_fields(manager_plone_client):
 def test_noindex_sets_response_header(manager_plone_client):
     # Enable behavior for pages
     manager_plone_client.patch(
-        "++api++/@controlpanels/dexterity-types/Document", json={"kitconcept.seo": True}
+        "++api++/@controlpanels/dexterity-types/Document",
+        json={"kitconcept.seo": True},
     )
 
     # Add page

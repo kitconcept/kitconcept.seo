@@ -1,8 +1,17 @@
 # kitconcept.seo
 
-[![Pypi](https://img.shields.io/pypi/status/kitconcept.seo.svg)](https://pypi.python.org/pypi/kitconcept.seo/)
-[![Pypi version](https://img.shields.io/pypi/v/kitconcept.seo.svg)](https://pypi.python.org/pypi/kitconcept.seo/)
-[![License](https://img.shields.io/pypi/l/kitconcept.seo.svg)](https://pypi.python.org/pypi/kitconcept.seo/)
+SEO addon for Plone
+
+[![PyPI](https://img.shields.io/pypi/v/kitconcept.seo)](https://pypi.org/project/kitconcept.seo/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/kitconcept.seo)](https://pypi.org/project/kitconcept.seo/)
+[![PyPI - Wheel](https://img.shields.io/pypi/wheel/kitconcept.seo)](https://pypi.org/project/kitconcept.seo/)
+[![PyPI - License](https://img.shields.io/pypi/l/kitconcept.seo)](https://pypi.org/project/kitconcept.seo/)
+[![PyPI - Status](https://img.shields.io/pypi/status/kitconcept.seo)](https://pypi.org/project/kitconcept.seo/)
+
+
+[![PyPI - Plone Versions](https://img.shields.io/pypi/frameworkversions/plone/kitconcept.seo)](https://pypi.org/project/kitconcept.seo/)
+
+[![CI](https://github.com/kitconcept/kitconcept.seo/actions/workflows/main.yml/badge.svg)](https://github.com/kitconcept/kitconcept.seo/actions/workflows/main.yml)
 
 [![kitconcept, GmbH](https://raw.githubusercontent.com/kitconcept/kitconcept.seo/master/kitconcept.png)](https://kitconcept.com/)
 
@@ -10,7 +19,6 @@
 `kitconcept.seo` works with the latest Plone 6 and its default frontend [Volto](https://github.com/plone/volto).
 It might still work with Plone Classic but that is not officially supported.
 If you are looking for a full featured SEO solution for Plone Classic or older versions of Plone, we suggest looking into [fourdigits.seo](https://pypi.org/project/fourdigits.seo/).
-
 
 ## Features
 
@@ -34,9 +42,7 @@ This add-on can be seen in action at the following sites:
 This product has been translated into
 
 - German
-
 - Italian
-
 - Spanish
 
 ## Installation
@@ -46,12 +52,12 @@ Install kitconcept.seo with `pip`:
 ```shell
 pip install kitconcept.seo
 ```
+
 And to create the Plone site:
 
 ```shell
-make create_site
+make create-site
 ```
-
 # Enable the SEO behavior
 
 To enable the SEO tab for a specific content type you have to enable the `kitconcept.seo` behavior.
@@ -120,9 +126,36 @@ In your Volto page you need to go to the edit mode of the page you want to add a
 
 ## Contribute
 
-- [Issue Tracker](https://github.com/collective/kitconcept.seo/issues)
-- [Source Code](https://github.com/collective/kitconcept.seo/)
+- [Issue tracker](https://github.com/kitconcept/kitconcept.seo/issues)
+- [Source code](https://github.com/kitconcept/kitconcept.seo/)
+
+### Prerequisites ✅
+
+-   An [operating system](https://6.docs.plone.org/install/create-project-cookieplone.html#prerequisites-for-installation) that runs all the requirements mentioned.
+-   [uv](https://6.docs.plone.org/install/create-project-cookieplone.html#uv)
+-   [Make](https://6.docs.plone.org/install/create-project-cookieplone.html#make)
+-   [Git](https://6.docs.plone.org/install/create-project-cookieplone.html#git)
+-   [Docker](https://docs.docker.com/get-started/get-docker/) (optional)
+
+### Installation 🔧
+
+1.  Clone this repository, then change your working directory.
+
+    ```shell
+    git clone git@github.com:kitconcept/kitconcept.seo.git
+    cd kitconcept.seo
+    ```
+
+2.  Install this code base.
+
+    ```shell
+    make install
+    ```
 
 ## License
 
 The project is licensed under GPLv2.
+
+## Credits and acknowledgements 🙏
+
+Generated using [Cookieplone (0.9.10)](https://github.com/plone/cookieplone) and [cookieplone-templates (dd13073)](https://github.com/plone/cookieplone-templates/commit/dd13073d34447056d6992461d8da29447d62c029) on 2026-01-27 09:51:10.480177. A special thanks to all contributors and supporters!
