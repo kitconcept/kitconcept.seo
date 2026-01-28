@@ -101,7 +101,7 @@ class ISeo(model.Schema):
         description=_(
             "Override the Open Graph image, that Facebook and Twitter use. "
             "When empty the default lead image will be used. Recommended image "
-            "ratio is 1,91:1 and 1200 x 630px."
+            "ratio is 1.91:1 and 1200 x 630px."
         ),
         required=False,
     )
