@@ -13,7 +13,7 @@ SEO addon for Plone
 
 [![CI](https://github.com/kitconcept/kitconcept.seo/actions/workflows/main.yml/badge.svg)](https://github.com/kitconcept/kitconcept.seo/actions/workflows/main.yml)
 
-[![kitconcept, GmbH](https://raw.githubusercontent.com/kitconcept/kitconcept.seo/master/kitconcept.png)](https://kitconcept.com/)
+[![kitconcept, GmbH](https://raw.githubusercontent.com/kitconcept/kitconcept.seo/main/kitconcept.png)](https://kitconcept.com/)
 
 [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) enhancements for the Plone Content Management System.
 `kitconcept.seo` works with the latest Plone 6 and its default frontend [Volto](https://github.com/plone/volto).
@@ -26,6 +26,8 @@ If you are looking for a full featured SEO solution for Plone Classic or older v
 - Allows to set the noindex header to exclude pages from being indexed
 - Allows to set a canonical URL
 - Allows to set Open Graph title, description and image
+
+![Fieldset](https://raw.githubusercontent.com/kitconcept/kitconcept.seo/main/kitconcept-seo.png)
 
 ## Examples
 
