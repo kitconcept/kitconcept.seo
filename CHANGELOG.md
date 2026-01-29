@@ -9,6 +9,33 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.0a1 (2026-01-29)
+
+
+### Breaking changes:
+
+- Drop support for Python 3.8. @ericof 
+- Drop support for Python 3.9. @ericof 
+
+
+### New features:
+
+- Add support for Plone 6.1. @ericof 
+- Add support for Plone 6.2. @ericof 
+- Add support for Python 3.12. @ericof 
+- Add support for Python 3.13. @ericof 
+
+
+### Internal:
+
+- Update codebase to the latest standard for Plone backend addons. @ericof [#2](https://github.com/kitconcept/kitconcept.seo/issues/2)
+- Add GHA checking for changelog entry on pull requests. @ericof 
+
+
+### Tests
+
+- Increase test coverage for the package. @ericof [#2](https://github.com/kitconcept/kitconcept.seo/issues/2)
+
 ## 2.1.3 (2026-01-27)
 
 ### Bug fixes:
