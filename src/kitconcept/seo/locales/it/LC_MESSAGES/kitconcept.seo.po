@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-28 12:10+0000\n"
+"POT-Creation-Date: 2026-04-26 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: kitconcept.seo\n"
 
-#: kitconcept/seo/behaviors/seo.py:72
+#: kitconcept/seo/behaviors/seo.py:85
 msgid "Canonical URL"
 msgstr "Canonical URL"
 
-#: kitconcept/seo/behaviors/seo.py:55
+#: kitconcept/seo/behaviors/seo.py:69
 msgid "Description"
 msgstr "Descrizione"
 
@@ -33,43 +33,43 @@ msgstr "Aggiunge dei campi extra ai content type per il SEO"
 msgid "Installs the kitconcept.seo add-on."
 msgstr "Installa kitconcept.seo"
 
-#: kitconcept/seo/behaviors/seo.py:65
+#: kitconcept/seo/behaviors/seo.py:78
 msgid "No Index"
 msgstr "No Index"
 
-#: kitconcept/seo/behaviors/seo.py:90
+#: kitconcept/seo/behaviors/seo.py:103
 msgid "Open Graph Description"
 msgstr "Descrizione Open Graph"
 
-#: kitconcept/seo/behaviors/seo.py:100
+#: kitconcept/seo/behaviors/seo.py:113
 msgid "Open Graph Image"
 msgstr "Immagine Open Graph"
 
-#: kitconcept/seo/behaviors/seo.py:81
+#: kitconcept/seo/behaviors/seo.py:94
 msgid "Open Graph Title"
 msgstr "Titolo Open Graph"
 
-#: kitconcept/seo/behaviors/seo.py:91
+#: kitconcept/seo/behaviors/seo.py:104
 msgid "Override the Open Graph description, that Facebook and Twitter use. When empty the default description will be used. Use maximum 155 characters."
 msgstr "Sovrascrive la descrizione per Open Graph, utilizzata da Facebook e Twitter. Se vuoto, verrà utilizzata la descrizione del contenuto. Sarebbe indicato utilizzare al massimo 155 caratteri."
 
-#: kitconcept/seo/behaviors/seo.py:101
+#: kitconcept/seo/behaviors/seo.py:114
 msgid "Override the Open Graph image, that Facebook and Twitter use. When empty the default lead image will be used. Recommended image ratio is 1.91:1 and 1200 x 630px."
 msgstr ""
 
-#: kitconcept/seo/behaviors/seo.py:82
+#: kitconcept/seo/behaviors/seo.py:95
 msgid "Override the Open Graph title, that Facebook and Twitter use. When empty the default title will be used. Use maximum 60 characters."
 msgstr "Sovrascrive il titolo per Open Graph, utilizzato da Facebook e Twitter. Se vuoto, verrà utilizzato il titolo del contenuto. Sarebbe indicato utilizzare al massimo 60 caratteri."
 
-#: kitconcept/seo/behaviors/seo.py:56
+#: kitconcept/seo/behaviors/seo.py:70
 msgid "Override the meta description. When empty the default description will be used. Use maximum 155 characters."
 msgstr ""
 
-#: kitconcept/seo/behaviors/seo.py:39
+#: kitconcept/seo/behaviors/seo.py:53
 msgid "Override the meta title. When empty the default title will be used. Use maximum 55 characters."
 msgstr ""
 
-#: kitconcept/seo/behaviors/seo.py:66
+#: kitconcept/seo/behaviors/seo.py:79
 msgid "Prevents a page from appearing in search engines"
 msgstr "Impedisce alla pagina di essere indicizzata dai motori di ricerca."
 
@@ -81,11 +81,15 @@ msgstr "SEO"
 msgid "SEO Behavior"
 msgstr "SEO Behavior"
 
-#: kitconcept/seo/behaviors/seo.py:73
+#: kitconcept/seo/behaviors/seo.py:38
+msgid "Search Result Preview"
+msgstr ""
+
+#: kitconcept/seo/behaviors/seo.py:86
 msgid "Tells the search engine to choose this URL as the canonical version and crawl that."
 msgstr "Dice ai motori di ricerca di utilizzare l'URL fornito come versione canonica del contenuto corrente, e di conseguenza indicizzano quel contenuto."
 
-#: kitconcept/seo/behaviors/seo.py:38
+#: kitconcept/seo/behaviors/seo.py:52
 msgid "Title"
 msgstr "Titolo"
 

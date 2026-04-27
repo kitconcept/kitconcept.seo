@@ -1,0 +1,1 @@
+- Updated the Spanish translation #31 [macagua]

@@ -1,0 +1,1 @@
+- Added more improvements about i18n support, via updating the translations files #30 [macagua]
